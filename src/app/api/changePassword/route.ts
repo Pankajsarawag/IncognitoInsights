@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     await dbConnect();
     try {
 
-        const { username, password } = await request.json();
+        const { username, newPassword } = await request.json();
         const user = await UserModel.findOne({
             username
         });
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
             );
         }
 
-        const hashpassword = await bcrypt.hash(password, 10);
+        const hashpassword = await bcrypt.hash(newPassword, 10);
 
         user.password = hashpassword;
         await user.save();

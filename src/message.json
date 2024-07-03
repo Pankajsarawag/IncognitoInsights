@@ -1,0 +1,73 @@
+[
+    {
+      "title": "Message from CuriousMind",
+      "content": "What's the best way to learn a new language?",
+      "received": "5 minutes ago",
+      "messageType": "question",
+      "isRead": false
+    },
+    {
+      "title": "Message from BookLover",
+      "content": "Just finished the book you recommended. It was fantastic!",
+      "received": "30 minutes ago",
+      "messageType": "feedback",
+      "isRead": true
+    },
+    {
+      "title": "Message from FoodieFriend",
+      "content": "Do you have any good recipes for Italian cuisine?",
+      "received": "1 hour ago",
+      "messageType": "question",
+      "isRead": false
+    },
+    {
+      "title": "Message from TravelGuru",
+      "content": "Your travel blog is amazing! Any tips for traveling on a budget?",
+      "received": "3 hours ago",
+      "messageType": "compliment",
+      "isRead": false
+    },
+    {
+      "title": "Message from TechEnthusiast",
+      "content": "What's your opinion on the latest smartphone releases?",
+      "received": "5 hours ago",
+      "messageType": "discussion",
+      "isRead": false
+    },
+    {
+      "title": "Message from FitnessFreak",
+      "content": "Can you share your workout routine?",
+      "received": "10 hours ago",
+      "messageType": "request",
+      "isRead": true
+    },
+    {
+      "title": "Message from MusicFan",
+      "content": "I loved your playlist! Can you suggest more songs?",
+      "received": "1 day ago",
+      "messageType": "compliment",
+      "isRead": true
+    },
+    {
+      "title": "Message from MovieBuff",
+      "content": "Have you seen any good movies lately?",
+      "received": "2 days ago",
+      "messageType": "question",
+      "isRead": false
+    },
+    {
+      "title": "Message from NatureLover",
+      "content": "Your photography is stunning! Any tips for beginners?",
+      "received": "3 days ago",
+      "messageType": "compliment",
+      "isRead": true
+    },
+    {
+      "title": "Message from GamerGuy",
+      "content": "What's your favorite game of all time?",
+      "received": "1 week ago",
+      "messageType": "discussion",
+      "isRead": false
+    }
+  ]
+  

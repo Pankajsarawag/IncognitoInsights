@@ -6,7 +6,7 @@ import UserModel from "@/model/User";
 export async function POST(request: Request) {
     await dbConnect();
     try {
-        const { username,email } = await request.json();
+        const { username,email,resetdomain } = await request.json();
 
         const user = await UserModel.findOne({
             $or: [
@@ -28,7 +28,9 @@ export async function POST(request: Request) {
         user.forgotPasswordLinkExpiry = new Date(Date.now() + 600000);
         await user.save();
 
-        const sendEmail = await sendForgotPasswaordEmail  (user.email, user.username);
+        const resetUrl = `${resetdomain}/${user?.username}`
+
+        const sendEmail = await sendForgotPasswaordEmail  (user.email, user.username, resetUrl);
 
         if (!sendEmail.success) {
             return Response.json({
@@ -40,6 +42,7 @@ export async function POST(request: Request) {
         }
 
         return Response.json({
+            username: user.username,
             success: true,
             message: "Reset password email sent successfully"
         },

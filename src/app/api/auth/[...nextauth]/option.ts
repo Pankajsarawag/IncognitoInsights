@@ -53,23 +53,30 @@ const authOptions: NextAuthOptions = {
                 token.isVerified = user.isVerified;
                 token.isAnonymous = user.isAnonymous;
                 token.username = user.username;
+                token.email = user.email;
+                token.name = user.name;
             }
             return token;
         },
         async session({ session, token }) {
             if (token) {
-                session.user._id = token._id as string;
-                session.user.isVerified = token.isVerified as boolean;
-                session.user.isAnonymous = token.isAnonymous as boolean;
-                session.user.username = token.username as string;
+                session.user = {
+                    _id: token._id as string,
+                    isVerified: token.isVerified as boolean,
+                    isAnonymous: token.isAnonymous as boolean,
+                    username: token.username as string,
+                    email: token.email as string,
+                    name: token.name as string,
+                };
             }
             return session;
         },
     },
+    secret: process.env.NEXTAUTH_SECRET,
     session: {
         strategy: 'jwt',
+        maxAge: 365 * 24 * 60 * 60,
     },
-    secret: process.env.NEXTAUTH_SECRET,
     pages: {
         signIn: '/sign-in',
     }

@@ -1,0 +1,136 @@
+
+.deleteAccount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color-primary);
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+  }
+  
+  .deleteAccount-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color-secondary);
+    padding: 20px;
+    width: 600px;
+    border-radius: var(--radius-20);
+    box-shadow: var(--shadow-1);
+    gap: 15px;
+  }
+
+  .deleteAccount-content h1{
+    font-size: var(--title-size-small);
+    font-weight: var(--weight-bold);
+    color: var(--font-color-heading);
+  }
+  
+  
+  .deleteAccount-Input {
+    border-radius: var(--radius-10);
+    padding: 0px 20px;
+    color: var(--font-color-subheading);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-1);
+    font-weight: var(--weight-light);
+  }
+  
+  .deleteAccount-Input:hover {
+    padding: 0px 10px;
+  }
+  
+  
+  .forgotPassword {
+    font-size: var(--title-size-small);
+    font-weight: var(--weight-bold);
+    color: var(--font-color-blue);
+    font-family: var(--font-family);
+    align-self: flex-end;
+    text-align: right;
+  }
+  
+  .button-click {
+    background-color: var(--button-background);
+    color: var(--font-color-heading);
+    border: none;
+    border-radius: var(--radius-10);
+    padding: 10px 20px !important;
+    font-size: var(--title-size-small);
+    font-weight: var(--weight-bold);
+    font-family: var(--font-family);
+    cursor: pointer;
+    align-self: center;
+  }
+  
+  .button-click:hover {
+    background-color: var(--button-color-hover);
+  }
+  
+  .button-click:active {
+    background-color: var(--button-background);
+  }
+
+  .alert-dialog-content{
+    background: var(--background-color-secondary);
+    padding: 10px 20px;
+    width: 400px;
+    margin: 10px;
+    border-radius: var(--radius-20);
+    border: 1px solid var(--border-color);
+    margin-left: 0px;
+  }
+
+  .alert-dialog-header{
+    color: var(--font-color-heading);
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .alert-dialog-footer{
+    color: var(--font-color-subheading);
+  }
+
+  .alert-dialog-confirm{
+    border : none;
+    background-color: var(--background-color-tertiary);
+    border-radius: var(--radius-10);
+  }
+
+  .alert-dialog-confirm:hover{
+    background-color: var(--background-color-tertiary);
+    transform: scale(1.05);
+  }
+
+    .alert-dialog-confirm:active{
+        transform: scale(1);
+    }
+  
+  
+  
+  .toast-error {
+    background-color: rgb(182, 11, 11); 
+    color: white; 
+    border: none;
+    border-radius: var(--radius-20);
+  }
+  
+  .loader{
+    animation: spin 1s linear infinite;
+    margin-right: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  @media screen and (max-width: 668px) {
+    .deleteAccount-content {
+        width: 95%;
+      }
+
+      .alert-dialog-content{
+        width: 90%;
+        margin-left: 0px;
+      }
+  }

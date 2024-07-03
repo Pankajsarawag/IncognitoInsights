@@ -1,0 +1,225 @@
+.verifyUser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    background-color: var(--background-color-primary);
+  }
+  
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color-secondary);
+    padding: 30px 10px;
+    width: 600px;
+    border-radius: var(--radius-20);
+    box-shadow: var(--shadow-1);
+    gap: 10px;
+  }
+  
+  .verifyUser-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .verifyUser-text h1 {
+    font-size: var(--title-size-large);
+    font-weight: var(--weight-bold);
+    color: var(--font-color-heading);
+    font-family: var(--font-family);
+  }
+
+  .verifyUser-text p {
+    font-size: var(--title-size);
+    font-weight: var(--weight-light);
+    color: var(--font-color-heading);
+    font-family: var(--font-family);
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 95%;
+  }
+  
+  .formLabel {
+    font-size: var(--title-size-small);
+    font-weight: var(--weight-light);
+    color: var(--font-color-heading);
+    font-family: var(--font-family);
+    padding: 0px 3px;
+  }
+  
+  .formInput {
+    border-radius: var(--radius-10);
+    padding: 0px 20px;
+    color: var(--font-color-subheading);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-1)
+  }
+  
+  .formInput:hover {
+    padding: 0px 10px;
+  }
+
+.loader{
+    animation: spin 1s linear infinite;
+    margin-right: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.toast-success {
+  background-color: #146b17; 
+  color: white; 
+  border: none;
+  border-radius: var(--radius-20);
+}
+
+.toast-error {
+  background-color: rgb(182, 11, 11); 
+  color: white; 
+  border: none;
+  border-radius: var(--radius-20);
+}
+
+.formMessage{
+  color: red; 
+    font-size: 0.8rem;
+    padding-left: 2px;
+}
+  
+  
+  .button {
+    background-color: var(--button-background);
+    color: var(--font-color-heading);
+    border: none;
+    border-radius: var(--radius-10);
+    padding: 10px 20px;
+    font-size: var(--title-size-small);
+    font-weight: var(--weight-bold);
+    font-family: var(--font-family);
+    cursor: pointer;
+    width: 15rem;
+    align-self: center;
+    margin-bottom: 8px;
+  }
+  
+  .button:hover {
+    background-color: var(--button-color-hover);
+  }
+  
+  .button:active {
+    background-color: var(--font-color-blue);
+  }
+  
+  .resend {
+    font-size: var(--title-size-small);
+    font-weight: var(--weight-light);
+    color: var(--font-color-heading);
+    font-family: var(--font-family);
+    align-self: left;
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+  }
+  
+  .resendLink {
+    color: var(--font-color-blue);
+    font-weight: var(--weight-bold);
+    display: flex;
+    flex-direction: row;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .form-content {
+      width: 550px;
+    }
+  
+    .verifyUser-text h1 {
+      font-size: var(--title-size);
+    }
+
+    .verifyUser-text p{
+        font-size: var(--title-size-small);
+        margin-top: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .form-content {
+      width: 500px;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .form-content {
+      width: 450px;
+      padding: 20px 0px;
+    }
+  
+    .verifyUser-text {
+      padding: 0px 20px;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .verifyUser{
+      height: 80%;
+    }
+    
+    .form-content {
+      width: 95%;
+    }
+  
+    .form {
+      width: 95%;
+    }
+
+    .verifyUser-text p{
+        font-size: 0.9rem;
+    }
+  }
+  
+  @media screen and (max-width: 410px) {
+    .verifyUser-text h1 {
+      font-size: 1.2rem
+    }
+
+    .verifyUser-text p{
+        font-size: 0.8rem;
+    }
+
+    .resend {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .verifyUser-text p{
+        font-size: 0.7rem;
+    }
+
+    .resend {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media screen and (max-width: 345px) {
+    .verifyUser-text p{
+        font-size: 0.66rem;
+    }
+  }
+
+

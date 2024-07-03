@@ -6,4 +6,5 @@ export interface ApiResponse {
     isAnonymous?: boolean;
     messages?: Array<Message>;
     name?:string;
+    isRead?:boolean;
 }

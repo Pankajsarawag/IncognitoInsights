@@ -1,0 +1,139 @@
+.navbar{
+    height: 80px;
+    width: 100%;
+    background-color: var(--background-color-secondary);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar_logo img{
+    height: 60px;
+}
+
+.login-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-button Button{
+    background-color: var(--button-background);
+    color: var(--white-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-6);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: var(--weight-bold);
+}
+
+.login-button Button:hover{
+    background-color: #203d7e;
+}
+
+.Login-icon{
+    margin-right: 0.5rem;
+} 
+
+.avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.Avatar{
+    cursor: pointer;
+}
+
+.Avatar:hover{
+    transform: scale(1.05);
+}
+
+.Avatar:active{
+    transform: scale(1);
+}
+
+.searchbar{
+    display: none;
+}
+
+.search-input {
+    border-radius: var(--radius-10);
+    padding: 0px 20px;
+    color: var(--font-color-subheading);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-1);
+    height: 20px;
+    display: flex;
+    color: var(--font-color-subheading);
+}
+
+.search-input:hover {
+    padding: 0px 10px;
+}
+
+.alert-dialog-cancel{
+    border: 1px solid var(--background-color-tertiary);
+    border-radius: var(--radius-10);
+    color: var(--font-color-subheading);
+  }
+
+  .alert-dialog-cancel:hover{
+    transform: scale(1.05);
+    color: var(--font-color-subheading);
+  }
+
+
+.loader{
+    animation: spin 1s linear infinite;
+    margin-right: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.drop-down-menu-content{
+    background: var(--background-color-primary);
+    border: 1px solid var(--border-color);
+    width: 20rem;
+    margin: 10px;
+}
+
+@media screen and (max-width: 1200px){
+    .searchbar{
+        display: flex;
+    } 
+}
+
+@media screen and (max-width: 560px){
+    .navbar_logo{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .alert-dialog-content{
+        width: 90% !important;
+        margin-left:-10px !important;
+    }
+
+    .search-username-main{
+        width: 50%;
+    }
+}

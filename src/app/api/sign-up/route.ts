@@ -6,13 +6,9 @@ import { sendVerificationEmail } from "@/helper/sendVerificationEmail";
 export async function POST(request: Request) {
     await dbConnect();
     try {
-        const { name, username, email, password } = await request.json();
+        const { firstName, lastName, username, email, password } = await request.json();
         
-        if (!name || !username || !email || !password) {
-            console.log("name", name);
-            console.log("username", username);
-            console.log("email", email);
-            console.log("password", password)
+        if (!firstName || !username || !email || !password) {
             return Response.json({
                 success: false,
                 message: "All fields (name, username, email, password) are required",
@@ -33,6 +29,7 @@ export async function POST(request: Request) {
             );
         }
 
+        const name = lastName ? `${firstName} ${lastName}` : firstName;
         const existingUserByEmail = await UserModel.findOne({ email });
         const verifyCode = Math.floor(100000 + Math.random() * 900000).toString();
 
@@ -49,6 +46,8 @@ export async function POST(request: Request) {
                 const hashpassword = await bcrypt.hash(password, 10);
                 existingUserByEmail.password = hashpassword;
                 existingUserByEmail.verifyCode = verifyCode;
+                existingUserByEmail.name = name;
+                existingUserByEmail.username = username;
                 existingUserByEmail.verifyCodeExpiry = new Date(Date.now() + 600000);
                 await existingUserByEmail.save();
             }
@@ -57,13 +56,13 @@ export async function POST(request: Request) {
         else {
             const hashpassword = await bcrypt.hash(password, 10);
             const user = new UserModel({
-                name,
+                name:name,
                 username,
                 email,
                 password: hashpassword,
                 verifyCode,
                 verifyCodeExpiry: new Date(Date.now() + 600000),
-                forgotPasswordLinkExpiry:undefined,
+                forgotPasswordLinkExpiry:new Date(Date.now()),
                 isVerified: false,
                 isAnonymous: true,
                 messages: []

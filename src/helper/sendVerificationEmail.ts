@@ -10,9 +10,6 @@ export async function sendVerificationEmail(
 ): Promise<ApiResponse> {
     try {
         var transport = nodemailer.createTransport({
-            // host: "smtp.ethereal.email",
-            // port: 587,
-            // secure: false, 
             service: "gmail",
             auth: {
               user: process.env.EMAIL_USER,
@@ -33,7 +30,7 @@ export async function sendVerificationEmail(
         console.log("Message sent: %s", info.messageId);
         return {
             success: true,
-            message: "Verification email sent successfully",
+            message: "Verification code sent successfully to your email",
         };
 
     } catch (error) {

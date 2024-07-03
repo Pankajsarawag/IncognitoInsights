@@ -45,7 +45,7 @@ export default function ForgotPasswordEmail({ username,resetUrl }: ForgotPasswor
                         </Text>
                     </Row>
                     <Row>
-                        <Link href={`${resetUrl}`} style={styles.link}>Reset Password</Link>
+                        <Link href={`${resetUrl}`} style={styles.link}>Click here</Link>
                     </Row>
                     <Row>
                         <Text style={styles.text}>

@@ -1,0 +1,321 @@
+:root {
+    --background-color-primary: black;
+    --background-color-secondary: rgb(10, 10, 10);
+    --background-color-tertiary: rgb(26, 26, 26);
+    --border-color: #1E1E1E;
+    --black: rgb(0, 0, 0);
+    --font-color-heading: #FAFAFA;
+    --font-color-subheading: #D6D6D6;
+    --font-color-sky: #20a4b6;
+    --font-color-blue: #0d48c5;
+    --radius-6: 6px;
+    --radius-8: 8px;
+    --radius-10: 10px;
+    --radius-12: 12px;
+    --radius-15: 15px;
+    --radius-20: 20px;
+    --radius-25: 25px;
+
+    --font-family: 'Poppins', sans-serif;
+    --title-size-small: 1rem;
+    --title-size: 1.5rem;
+    --title-size-large: 2.5rem;
+    --heading-size: 4rem;
+    --weight-bold: 700;
+    --weight-light: 400;
+
+    --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
+    --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
+    --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
+    --button-background: #042979;
+    --button-color-hover: #203d7e;
+
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease-in-out;
+}
+
+.dashboard {
+    width: 100%;
+    height: 90%;
+    background-color: var(--background-color-primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.message-content {
+    margin: 10px;
+    width: 470px;
+    height: 100%;
+    background-color: var(--background-color-secondary);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-20);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-1);
+    align-items: center;
+}
+
+.message-navbar {
+    background-color: var(--background-color-secondary);
+    width: 100%;
+    height: 100px;
+    border-radius: var(--radius-20) var(--radius-20) 0 0;
+}
+
+.message-navbar-title h1 {
+    font-size: var(--title-size-large);
+    color: var(--font-color-heading);
+}
+
+.message-navbar-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.refresh-switch {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.message-navbar-switch {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+    color: var(--font-color-subheading);
+}
+
+.accept-switch {
+    background-color: red;
+}
+
+.refresh-button {
+    background-color: var(--background-color-secondary);
+    padding: 10px;
+    color: var(--font-color-heading);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-10);
+    cursor: pointer;
+}
+
+.message-separator {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 15px 0px;
+}
+
+.message-cards {
+    overflow: auto;
+    width: 470px;
+}
+
+.message-cards::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.message-cards::-webkit-scrollbar-thumb {
+    background-color: var(--background-color-tertiary);
+    border-radius: 100px;
+}
+
+.message-cards::-webkit-scrollbar-track {
+    background-color: var(--background-color-primary);
+    border-radius: 100px;
+    margin: 3rem 0;
+}
+
+
+.message-section {
+    width: 60%;
+    height: 100%;
+    padding: 20px;
+    background-color: var(--background-color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    border-radius: var(--radius-20);
+    border: 1px solid var(--border-color);
+    overflow: auto;
+}
+
+.message-section p {
+    font-size: var(--title-size);
+    color: var(--font-color-heading);
+}
+
+
+.search-user-section {
+    margin: 10px;
+    width: 300px;
+    height: 100%;
+    background-color: var(--background-color-secondary);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-20);
+    padding: 20px 0px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-1);
+    gap: 20px;
+}
+
+.input-main {
+    padding: 0px 20px;
+}
+
+.search-input {
+    border-radius: var(--radius-10);
+    padding: 0px 20px;
+    color: var(--font-color-subheading);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-1);
+    height: 45px;
+    display: flex;
+    gap: 10px;
+    color: var(--font-color-subheading);
+}
+
+.search-input:hover {
+    padding: 0px 10px;
+}
+
+.search-user {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color-secondary);
+    width: 300px;
+    height: 100%;
+    gap: 10px;
+    overflow: auto;
+    padding: 0px 20px;
+}
+
+.search-username-main {
+    width: 100%;
+    height: 70px;
+    background-color: var(--background-color-tertiary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 10px;
+    border-radius: var(--radius-20);
+    cursor: pointer;
+}
+
+.search-username-main:hover {
+    transform: scale(1.05);
+}
+
+.search-username-main:active {
+    transform: scale(1);
+}
+
+.userround {
+    height: 3rem;
+    width: 3rem;
+    color: var(--font-color-subheading);
+}
+
+.search-username {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-username h1 {
+    color: var(--font-color-heading);
+    font-size: var(--title-size-small);
+    font-weight: var(--weight-bold);
+}
+
+.search-username p {
+    color: var(--font-color-subheading);
+    font-size: var(--title-size-small);
+    font-weight: var(--weight-light);
+}
+
+.accept-switch {
+    position: relative;
+    background-color: red;
+    color: whitesmoke;
+    width: 50px;
+    height: 25px;
+}
+
+.toast-success {
+    background-color: #146b17;
+    color: white;
+    border: none;
+    border-radius: var(--radius-20);
+}
+
+.toast-error {
+    background-color: rgb(182, 11, 11);
+    color: white;
+    border: none;
+    border-radius: var(--radius-20);
+}
+
+.message-search {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--background-color-primary);
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .search-user-section {
+        display: none;
+    }
+
+    .message-section {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .message-content{
+        width: 80%;
+    }
+
+    .message-section{
+        width: 80%;
+    }
+
+    .message-cards {
+        overflow: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .dashboard{
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+    }
+
+    .message-search{
+        height: 50%;
+    }
+
+    .messsage-content{
+        height: 50%;
+    }
+}

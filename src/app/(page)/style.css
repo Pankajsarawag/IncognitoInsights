@@ -1,0 +1,139 @@
+.carousel-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85%;
+}
+
+.carousel-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 50%;
+    height: 220px;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--background-color-secondary );
+    border-radius: var(--radius-20);
+    border: 1px solid var(--border-color)   ;
+    position: relative;
+    color: var(--font-color-heading);
+}
+
+.cardheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--title-size);
+    padding: 5px 0px 15px 0px;
+}
+
+.cardheader h2{
+    padding: 5px 20px;
+    border-radius: var(--radius-25);
+}
+
+.seprator{
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.CardContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--title-size);
+    padding: 5px 0px 15px 0px;
+}
+
+.cardfooter{
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+    font-size: var(--title-size-small);  
+    color: var(--font-color-subheading);
+}
+
+@media screen and (max-width: 1500px){
+    .card{
+        width: 65%;
+    } 
+}
+
+@media screen and (max-width: 1000px){
+    .card{
+        width: 75%;
+    } 
+}
+
+
+@media screen and (max-width: 750px){
+    .card{
+        width: 85%;
+    } 
+}
+
+@media screen and (max-width: 550px){
+    .card{
+        width: 100%;
+    } 
+
+    .cardheader{
+        font-size: 1.2rem;
+        font-weight: var(--weight-bold);
+    }
+
+    .CardContent{
+        font-size: var(--title-size-small)
+    }
+
+    .cardfooter{
+        font-size: var(--title-size-small);
+    }
+    
+}
+
+@media screen and (max-width: 410px){
+    .card{
+        padding: 20px 0px;
+    } 
+
+    .cardheader{
+        font-size: 1.1rem;
+        font-weight: var(--weight-bold);
+    }
+
+    .CardContent{
+        font-size: 0.8rem
+    }
+
+    .cardfooter{
+        font-size: 0.7rem;
+    }
+    
+}
+
+@media screen and (max-width: 380px){
+    .card{
+        padding: 20px 0px;
+    } 
+
+    .cardheader{
+        font-size: 1rem;
+        font-weight: var(--weight-bold);
+    }
+
+    .CardContent{
+        font-size: 0.7rem
+    }
+
+    .cardfooter{
+        font-size: 0.6rem;
+    }
+    
+}

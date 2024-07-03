@@ -1,4 +1,3 @@
-import { match, strict } from 'assert';
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface Message extends Document {
@@ -32,6 +31,11 @@ const MessageSchema: Schema = new Schema({
 });
 
 const UserSchema: Schema = new Schema({
+    name:{
+        type: String,
+        required: [true, 'Please provide your name'],
+        unique: false,
+    },
     username: {
         type: String,
         required: [true, 'Please provide a username'],
@@ -58,7 +62,8 @@ const UserSchema: Schema = new Schema({
     },
     forgotPasswordLinkExpiry: {
         type: Date,
-        required: [true, 'Please provide a forgot password link expiry date']
+        required: [true, 'Please provide a forgot password link expiry date'],
+        default: null,
     },
     isVerified: {
         type: Boolean,
@@ -70,6 +75,10 @@ const UserSchema: Schema = new Schema({
     },
     messages: [MessageSchema]
 });
+
+
+UserSchema.index({ username: 'text' });
+
 
 const UserModel = (mongoose.models.User as mongoose.Model<User>) || mongoose.model<User>('User', UserSchema);
 

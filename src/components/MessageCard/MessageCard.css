@@ -1,0 +1,188 @@
+:root {
+  --background-color-main: black;
+  --background-color-secondary: rgb(10, 10, 10);
+  --background-color-tertiary: rgb(26, 26, 26);
+  --border-color: #1E1E1E;
+  --black: rgb(0, 0, 0);
+  --font-color-heading: #FAFAFA;
+  --font-color-subheading: #D6D6D6;
+  --font-color-sky: #20a4b6;
+  --font-color-blue: #0d48c5;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-15: 15px;
+  --radius-20: 20px;
+  --radius-25: 25px;
+
+  --font-family: 'Poppins', sans-serif;
+  --title-size-small: 1rem;
+  --title-size: 1.5rem;
+  --title-size-large: 2.5rem;
+  --heading-size: 4rem;
+  --weight-bold: 700;
+  --weight-light: 400;
+
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
+  --Button-background: #042979;
+  --Button-color-hover: #203d7e;
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease-in-out;
+}
+
+.Card {
+  margin: 10px;
+  border-radius: var(--radius-15);
+  border: none;
+  box-shadow: var(--shadow-2);
+  padding: 10px;
+  background-color: var(--background-color-tertiary);
+  width: 430px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  cursor: pointer;
+  transition: var(--transition-2);
+}
+
+.Card:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-3);
+}
+
+.Card:active {
+  transform: scale(1);
+  box-shadow: var(--shadow-1);
+}
+
+.CardHeader {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  align-self: flex-end;
+  margin: 0px;
+  padding: 0px;
+}
+
+.CardContent {
+  font-size: var(--title-size);
+  color: var(--font-color-heading);
+  padding: 0px;
+  padding: 0px 10px;
+}
+
+.CardFooter {
+  font-size: var(--title-size-small);
+  color: var(--font-color-subheading);
+  align-self: flex-end;
+  padding: 0px;
+}
+
+.Button {
+  background-color: rgb(201, 19, 19);
+  color: var(--font-color-heading);
+  border: none;
+  border-radius: var(--radius-10);
+  padding: 5px !important;
+  font-size: var(--title-size-small);
+  font-family: var(--font-family);
+  cursor: pointer;
+  align-self: center;
+  align-self: flex-end;
+}
+
+.Button:hover {
+  background-color: rgb(240, 56, 56);
+}
+
+.Button:active {
+  background-color: rgb(201, 19, 19);
+}
+
+.alert-dialog-content {
+  background: var(--background-color-secondary);
+  padding: 10px 20px;
+  width: 400px;
+  margin: 10px;
+  border-radius: var(--radius-20);
+  border: 1px solid var(--border-color);
+}
+
+.alert-dialog-header {
+  color: var(--font-color-heading);
+  margin: 0px;
+  padding: 0px;
+}
+
+.alert-dialog-footer {
+  color: var(--font-color-subheading);
+}
+
+.alert-dialog-cancel {
+  border: 1px solid var(--background-color-tertiary);
+  border-radius: var(--radius-10);
+}
+
+.alert-dialog-cancel:hover {
+  transform: scale(1.05);
+}
+
+.alert-dialog-cancel:active {
+  transform: scale(1);
+}
+
+.alert-dialog-action {
+  border: none;
+  background-color: var(--background-color-tertiary);
+  border-radius: var(--radius-10);
+}
+
+.alert-dialog-action:hover {
+  background-color: var(--background-color-tertiary);
+  transform: scale(1.05);
+}
+
+.alert-dialog-action:active {
+  transform: scale(1);
+}
+
+
+.toast-success {
+  background-color: #146b17;
+  color: white;
+  border: none;
+  border-radius: var(--radius-20);
+}
+
+.toast-error {
+  background-color: rgb(182, 11, 11);
+  color: white;
+  border: none;
+  border-radius: var(--radius-20);
+}
+
+@media screen and (max-width: 950px) {
+  .Card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .CardContent {
+    font-size: var(--title-size-small);
+    color: var(--font-color-heading);
+    padding: 0px;
+    padding: 0px 10px;
+  }
+
+  .CardFooter {
+    font-size: var(--title-size-small);
+  }
+
+}

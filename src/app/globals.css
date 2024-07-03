@@ -2,75 +2,66 @@
   @tailwind components;
   @tailwind utilities;
 
-  @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 224 71.4% 4.1%;
+  :root {
+    --background-color-primary: black;
+    --background-color-secondary: rgb(10, 10, 10);
+    --background-color-tertiary: rgb(26, 26, 26);
+    --border-color: #1E1E1E;
+    --black: rgb(0, 0, 0);
+    --font-color-heading: #FAFAFA;
+    --font-color-subheading: #D6D6D6;
+    --font-color-sky: #20a4b6;
+    --font-color-blue: #0d48c5;
+    --radius-6: 6px;
+    --radius-8: 8px;
+    --radius-10: 10px;
+    --radius-12: 12px;
+    --radius-15: 15px;
+    --radius-20: 20px;
+    --radius-25: 25px;
 
-      --card: 0 0% 100%;
-      --card-foreground: 224 71.4% 4.1%;
+    --font-family: 'Poppins', sans-serif;
+    --title-size-small: 1rem;
+    --title-size: 1.5rem;
+    --title-size-large: 2.5rem;
+    --heading-size: 4rem;
+    --weight-bold: 700;
+    --weight-light: 400;
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 224 71.4% 4.1%;
-
-      --primary: 220.9 39.3% 11%;
-      --primary-foreground: 210 20% 98%;
-
-      --secondary: 220 14.3% 95.9%;
-      --secondary-foreground: 220.9 39.3% 11%;
-
-      --muted: 220 14.3% 95.9%;
-      --muted-foreground: 220 8.9% 46.1%;
-
-      --accent: 220 14.3% 95.9%;
-      --accent-foreground: 220.9 39.3% 11%;
-
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 210 20% 98%;
-
-      --border: 220 13% 91%;
-      --input: 220 13% 91%;
-      --ring: 224 71.4% 4.1%;
-
-      --radius: 0.5rem;
-    }
-
-    .dark {
-      --background: 224 71.4% 4.1%;
-      --foreground: 210 20% 98%;
-
-      --card: 224 71.4% 4.1%;
-      --card-foreground: 210 20% 98%;
-
-      --popover: 224 71.4% 4.1%;
-      --popover-foreground: 210 20% 98%;
-
-      --primary: 210 20% 98%;
-      --primary-foreground: 220.9 39.3% 11%;
-
-      --secondary: 215 27.9% 16.9%;
-      --secondary-foreground: 210 20% 98%;
-
-      --muted: 215 27.9% 16.9%;
-      --muted-foreground: 217.9 10.6% 64.9%;
-
-      --accent: 215 27.9% 16.9%;
-      --accent-foreground: 210 20% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 210 20% 98%;
-
-      --border: 215 27.9% 16.9%;
-      --input: 215 27.9% 16.9%;
-      --ring: 216 12.2% 83.9%;
-    }
+    --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
+    --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
+    --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
+    --button-background: #042979;
+    --button-color-hover: #203d7e;  
+  
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease-in-out;
   }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
-  }
+
+  body {
+    background-color: var(--background-color-primary);
+    margin: 0%;
+    padding: 0%;
+    line-height: 1.5;
+    color: var(--white-color);
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
+    font-family: var(--font-family);
+    height: 100vh;
+    width: 100vw;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--background-color-secondary);
+    border-radius: var(--radius-6);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--black-color);
+}

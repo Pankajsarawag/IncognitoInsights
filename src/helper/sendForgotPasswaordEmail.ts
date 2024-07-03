@@ -7,9 +7,9 @@ import{ render } from "@react-email/components";
 export async function sendForgotPasswaordEmail(
     email: string,
     username: string,
+    resetUrl:string
 ): Promise<ApiResponse> {
     
-    const resetUrl = `${process.env.DOMAIN_NAME}/reset-password/${username? username: ""}`;
     try {
         var transport = nodemailer.createTransport({
             service: "gmail",
