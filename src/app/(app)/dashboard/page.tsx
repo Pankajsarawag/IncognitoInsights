@@ -251,7 +251,7 @@ export default function Dashboard() {
           {results.map(user => (
             user.username !== session?.user?.username &&
             <div key={user._id} className='search-username-main'
-              onClick={() => Router.push('/sendMessage/${user.username}')}
+            onClick={() => Router.push(`/sendMessage/${user.username}`)}
             >
               <UserRound className='userround' />
               <div className='search-username'>
